@@ -1,0 +1,38 @@
+.navbar {
+  background-color: #262528;
+  padding: 22px 30px;
+  height: 115px;
+  align-items: center;
+}
+.main-nav-items > li > a {
+  color: white;
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 600;
+  font-size: 1.3rem;
+  letter-spacing: .1rem;
+}
+.main-nav-items > li > a:hover{
+    color: #e83630;
+    transition: all calc(200 * 1ms) cubic-bezier(.42,.01,.58,1);
+}
+.navbar > a > h1 {
+  color: white;
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 600;
+  font-size: 2rem;
+}
+.navbar > a > h1 > span{
+    color: #e83630;
+}
+
+.nav-logo {
+  width: 3rem;
+  margin: 1rem;
+}
+.nav-item {
+  margin: 0.25rem 1rem;
+}
+.main-nav-items {
+  width: 70%;
+  justify-content: flex-end;
+}
