@@ -40,7 +40,3 @@ li {
 .align-items-center {
     align-items: center !important;
 }
-/* Declaracion Section */
-#itemsContainer{
-  margin: 2rem 5rem;
-}

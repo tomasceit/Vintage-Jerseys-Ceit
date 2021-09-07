@@ -1,19 +1,12 @@
 import "./App.css";
 import NavBar from "./components/NavBar/NavBar";
-import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
+import ItemsListContainer from "./components/ItemsListContainer/ItemsListContainer";
 
 const App = () => {
   return (
     <>
       <NavBar />
-      <section id="itemsContainer" className="d-flex flex-row flex-wrap">
-        <ItemListContainer name='1995 Barcelona Home' price='8.500,00' src='https://www.jerseygoal.co/images/Retro-Jersey/1992-1995%20Barcelona%20Home%20Retro%20Jersey%201.jpg'/>
-        <ItemListContainer name='1994 WC Argentina Away' price='9.500,00' src='https://www.jerseygoal.co/images/Retro-Jersey/1994-1995%20Argentina%20Away%20Retro%20Jersey%20701.jpg'/>
-        <ItemListContainer name='1999 Inter Milan Home' price='7.000,00' src='https://www.jerseygoal.co/images/Retro-Jersey/1998-1999%20Intel%20Milan%20Home%20Long%20Sleeve%20Retro%20Jersey%20BAGGIO%2010%20Shirt.jpg'/>
-        <ItemListContainer name='1998 Boca Jrs Home' price='8.900,00' src='https://www.jerseygoal.co/images/Retro-Jersey/1997-1998%20Boca%20Juniors%20Home%20Shirt%20Maradona%2010.jpg'/>
-        <ItemListContainer name='1998 WC France Home' price='11.500,00' src='https://www.jerseygoal.co/images/France/1998%20World%20Cup%20France%20Home%20Final%20Jersey.jpg'/>
-        <ItemListContainer name='1997 Arsenal Home' price='10.500,00' src='https://www.jerseygoal.co/images/Retro-Jersey/1998-1999%20Arsenal%20Home%20Retro%20Jersey%201.jpg'/>
-      </section>
+      <ItemsListContainer nombre='Victoria' />
     </>
   );
 };

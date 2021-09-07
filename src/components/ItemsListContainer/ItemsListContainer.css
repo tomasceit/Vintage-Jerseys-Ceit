@@ -1,0 +1,11 @@
+#itemsContainer{
+    margin: 2rem 5rem;
+}
+#itemsContainer > h2{
+    width: 100%;
+    text-align: center;
+    font-size: 3rem;
+}
+#itemsContainer > h2 > span{
+    color: #e83630;
+}

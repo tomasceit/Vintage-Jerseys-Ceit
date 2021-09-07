@@ -1,6 +1,6 @@
-import "./ItemListContainer.css";
+import "./Cards.css";
 
-const ItemListContainer = ({ name='nombre del producto', price='80.00', src='https://tienda.ganon.com/sca-dev-kilimanjaro/img/no_image_available.jpeg?resizeid=3\u0026resizeh=250\u0026resizew=300' }) => {
+const Cards = ({ name='nombre del producto', price='80.00', src='https://tienda.ganon.com/sca-dev-kilimanjaro/img/no_image_available.jpeg?resizeid=3\u0026resizeh=250\u0026resizew=300' }) => {
   return (
     <div className="productContainer">
       <a href="#">
@@ -32,4 +32,4 @@ const ItemListContainer = ({ name='nombre del producto', price='80.00', src='htt
   );
 };
 
-export default ItemListContainer;
+export default Cards;
