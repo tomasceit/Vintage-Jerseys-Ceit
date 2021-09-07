@@ -2,10 +2,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 500;
+  color: #262528;
 }
 a {
   text-decoration: none !important;
-  color: black;
 }
 li {
   list-style: none;
@@ -18,7 +20,10 @@ li {
   flex-direction: column !important;
 }
 .flex-row {
-  flex: row !important;
+  flex-direction: row !important;
+}
+.flex-wrap {
+  flex-wrap: wrap !important;
 }
 .justify-content-center {
     justify-content: center !important;
@@ -34,4 +39,8 @@ li {
 }
 .align-items-center {
     align-items: center !important;
+}
+/* Declaracion Section */
+#itemsContainer{
+  margin: 2rem 5rem;
 }

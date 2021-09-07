@@ -1,0 +1,9 @@
+.shopping-cart-logo{
+    background-color: transparent;
+    border: none;
+    padding: 1rem;
+}
+.shopping-cart-logo > svg:hover{
+    stroke: #e83630;
+    transition: all calc(200 * 1ms) cubic-bezier(.42,.01,.58,1);
+}

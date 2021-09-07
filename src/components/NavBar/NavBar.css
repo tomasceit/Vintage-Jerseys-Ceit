@@ -1,13 +1,15 @@
 .navbar {
   background-color: #262528;
   padding: 22px 30px;
-  height: 115px;
+  height: 100px;
   align-items: center;
+}
+.navbar > a > svg {
+  margin: .5rem;
 }
 .main-nav-items > li > a {
   color: white;
-  font-family: "Barlow Condensed", sans-serif;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 1.3rem;
   letter-spacing: .1rem;
 }
@@ -17,22 +19,24 @@
 }
 .navbar > a > h1 {
   color: white;
-  font-family: "Barlow Condensed", sans-serif;
   font-weight: 600;
   font-size: 2rem;
 }
 .navbar > a > h1 > span{
     color: #e83630;
 }
-
-.nav-logo {
-  width: 3rem;
-  margin: 1rem;
-}
 .nav-item {
   margin: 0.25rem 1rem;
 }
 .main-nav-items {
-  width: 70%;
-  justify-content: flex-end;
+  width: 65%;
+  justify-content: center;
+}
+.user-logo{
+  background-color: transparent;
+  border: none;
+  padding: 1rem;
+}
+.icon-tabler-user:hover{
+  stroke: #e83630;
 }
