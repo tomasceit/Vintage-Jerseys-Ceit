@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/Vintage-Jerseys-Ceit/static/css/main.02a8b8a7.chunk.css",
-    "main.js": "/Vintage-Jerseys-Ceit/static/js/main.29750d2a.chunk.js",
-    "main.js.map": "/Vintage-Jerseys-Ceit/static/js/main.29750d2a.chunk.js.map",
+    "main.css": "/Vintage-Jerseys-Ceit/static/css/main.275301b6.chunk.css",
+    "main.js": "/Vintage-Jerseys-Ceit/static/js/main.08fb6ccc.chunk.js",
+    "main.js.map": "/Vintage-Jerseys-Ceit/static/js/main.08fb6ccc.chunk.js.map",
     "runtime-main.js": "/Vintage-Jerseys-Ceit/static/js/runtime-main.a818d4e3.js",
     "runtime-main.js.map": "/Vintage-Jerseys-Ceit/static/js/runtime-main.a818d4e3.js.map",
-    "static/js/2.fea410f9.chunk.js": "/Vintage-Jerseys-Ceit/static/js/2.fea410f9.chunk.js",
-    "static/js/2.fea410f9.chunk.js.map": "/Vintage-Jerseys-Ceit/static/js/2.fea410f9.chunk.js.map",
+    "static/js/2.8df42f1b.chunk.js": "/Vintage-Jerseys-Ceit/static/js/2.8df42f1b.chunk.js",
+    "static/js/2.8df42f1b.chunk.js.map": "/Vintage-Jerseys-Ceit/static/js/2.8df42f1b.chunk.js.map",
     "index.html": "/Vintage-Jerseys-Ceit/index.html",
-    "static/css/main.02a8b8a7.chunk.css.map": "/Vintage-Jerseys-Ceit/static/css/main.02a8b8a7.chunk.css.map",
-    "static/js/2.fea410f9.chunk.js.LICENSE.txt": "/Vintage-Jerseys-Ceit/static/js/2.fea410f9.chunk.js.LICENSE.txt"
+    "static/css/main.275301b6.chunk.css.map": "/Vintage-Jerseys-Ceit/static/css/main.275301b6.chunk.css.map",
+    "static/js/2.8df42f1b.chunk.js.LICENSE.txt": "/Vintage-Jerseys-Ceit/static/js/2.8df42f1b.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.a818d4e3.js",
-    "static/js/2.fea410f9.chunk.js",
-    "static/css/main.02a8b8a7.chunk.css",
-    "static/js/main.29750d2a.chunk.js"
+    "static/js/2.8df42f1b.chunk.js",
+    "static/css/main.275301b6.chunk.css",
+    "static/js/main.08fb6ccc.chunk.js"
   ]
 }
