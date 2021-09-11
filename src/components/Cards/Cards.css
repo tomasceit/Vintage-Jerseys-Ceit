@@ -1,6 +1,10 @@
 .productContainer{
     width: 25%;
     padding: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+}
+.productContainer:hover{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
 }
 a > .productImage{
     height: 280px;
@@ -15,8 +19,8 @@ a > .productImage{
     font-weight: 600;
 }
 .productButtons{
-    justify-content: end;
     padding-top: .5rem;
+    justify-content: space-between;
 }
 h3.productName > a{
     font-size: 1.7rem;
@@ -33,7 +37,6 @@ h3.productName > a:hover{
     color: #e83630;
 }
 .addToCart{
-    justify-self: end;
     background-color: transparent;
     border: none;
     font-size: 1.3rem;
@@ -41,5 +44,9 @@ h3.productName > a:hover{
 }
 button.addToCart:hover{
     color: #e83630;
+    transition: all calc(200 * 1ms) cubic-bezier(.42,.01,.58,1);
+}
+.addToCart > svg:hover{
+    stroke: #e83630;
     transition: all calc(200 * 1ms) cubic-bezier(.42,.01,.58,1);
 }

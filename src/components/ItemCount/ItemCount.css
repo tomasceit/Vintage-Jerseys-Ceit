@@ -1,0 +1,16 @@
+#itemCounter{
+    width: 5rem;
+    align-items: center;
+    font-size: 1rem;
+}
+#itemCounter > button{
+    width: 2.6rem;
+    text-align:center;
+    height:100%;
+    border: 1.9px solid #262528;
+    background-color: transparent;
+    font-size: 1rem;
+}
+#itemCounter > .operations{
+    width:1.2rem;
+}

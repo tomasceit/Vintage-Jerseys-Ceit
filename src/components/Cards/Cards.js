@@ -1,21 +1,27 @@
 import "./Cards.css";
+import ItemCount from "../ItemCount/ItemCount";
 
-const Cards = ({ name='nombre del producto', price='80.00', src='https://tienda.ganon.com/sca-dev-kilimanjaro/img/no_image_available.jpeg?resizeid=3\u0026resizeh=250\u0026resizew=300' }) => {
+const Cards = ({ name = 'nombre del producto', price = '80.00', src = 'https://tienda.ganon.com/sca-dev-kilimanjaro/img/no_image_available.jpeg?resizeid=3\u0026resizeh=250\u0026resizew=300', stock = 10, initial = 1 }) => {
   return (
     <div className="productContainer">
-      <a href="#">
+
+      <a className="productImage" href="#">
         <div className="productImage">
           <img src={src} alt="Imagen del producto" />
         </div>
       </a>
+
       <div className="productContent">
+
         <div className="productInfo d-flex flex-column">
           <h3 className="productName">
             <a href="#">{name}</a>
           </h3>
           <span className="productPrice">${price}</span>
         </div>
+
         <div className="productButtons d-flex">
+          <ItemCount stock={stock} initial={initial} />
           <button className="addToCart d-flex">
             <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-shopping-cart-plus" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="#262528" fill="none" strokeLinecap="round" strokeLinejoin="round">
               <path stroke="none" d="M0 0h24v24H0z" fill="none" />
@@ -27,7 +33,9 @@ const Cards = ({ name='nombre del producto', price='80.00', src='https://tienda.
             </svg>
             Add to cart</button>
         </div>
+
       </div>
+    
     </div>
   );
 };
