@@ -1,5 +1,5 @@
 import "./Cards.css";
-import ItemCount from "../ItemCount/ItemCount";
+import ItemCount from "../ItemCount/ItemCount.jsx";
 
 const Cards = ({ name = 'nombre del producto', price = '80.00', src = 'https://tienda.ganon.com/sca-dev-kilimanjaro/img/no_image_available.jpeg?resizeid=3\u0026resizeh=250\u0026resizew=300', stock = 10, initial = 1 }) => {
   return (
