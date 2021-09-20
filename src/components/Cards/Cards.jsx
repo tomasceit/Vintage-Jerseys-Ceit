@@ -5,7 +5,7 @@ const Cards = ({ name = 'nombre del producto', price = '80.00', src = 'https://t
   return (
     <div className="productContainer">
 
-      <a className="productImage" href="#">
+      <a className="productImage" href="#itemDetails">
         <div className="productImage">
           <img src={src} alt="Imagen del producto" />
         </div>
@@ -15,7 +15,7 @@ const Cards = ({ name = 'nombre del producto', price = '80.00', src = 'https://t
 
         <div className="productInfo d-flex flex-column">
           <h3 className="productName">
-            <a href="#">{name}</a>
+            <a href='#'>{name}</a>
           </h3>
           <span className="productPrice">${price}</span>
         </div>

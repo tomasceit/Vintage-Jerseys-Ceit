@@ -1,10 +1,9 @@
 import "./ItemsListContainer.css";
-import ItemsList from "../ItemsList/ItemsList.js";
+import ItemsList from "../ItemsList/ItemsList.jsx";
 
-const ItemsListContainer = ({ nombre }) => {
+const ItemsListContainer = () => {
     return (
         <section id="itemsContainer">
-            <h2>Bienvenid@ <span>{nombre}</span></h2>
             <ItemsList />
         </section>);
 }

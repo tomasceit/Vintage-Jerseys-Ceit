@@ -1,11 +1,8 @@
 .navbar {
   background-color: #262528;
   padding: 22px 30px;
-  height: 100px;
+  height: 65px;
   align-items: center;
-}
-.navbar > a > svg {
-  margin: .5rem;
 }
 .main-nav-items > li > a {
   color: white;
@@ -19,11 +16,13 @@
 }
 .navbar > a > h1 {
   color: white;
-  font-weight: 600;
-  font-size: 2rem;
+  font-weight: 800;
+  font-size: 1.9rem;
+  padding-left: 1rem;
 }
 .navbar > a > h1 > span{
     color: #e83630;
+    font-weight: 800;
 }
 .nav-item {
   margin: 0.25rem 1rem;
@@ -31,12 +30,5 @@
 .main-nav-items {
   width: 65%;
   justify-content: center;
-}
-.user-logo{
-  background-color: transparent;
-  border: none;
-  padding: 1rem;
-}
-.icon-tabler-user:hover{
-  stroke: #e83630;
+  margin-bottom: 0;
 }
