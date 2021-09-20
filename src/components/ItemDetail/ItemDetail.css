@@ -2,8 +2,12 @@ div.item-detail > div > h3{
     font-size: 2.5rem;
     margin: 0.5rem 5rem;
 }
+div.item-detail{
+    padding-top: 70px;
+}
 #itemDetails img{
     max-height: 550px;
+    max-width: 550px;
 }
 .c-red{
     color: #e83630 !important;

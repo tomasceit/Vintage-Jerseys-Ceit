@@ -29,6 +29,7 @@ const ItemsList = () => {
         return (
           <Card
             key={prod.id}
+            id={prod.id}
             name={prod.name}
             price={prod.price}
             src={prod.src}

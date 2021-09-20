@@ -11,7 +11,6 @@ const App = () => {
       <ItemsListContainer />
       <hr />
       <ItemDetailContainer />
-      <hr />
       <Footer />
     </>
   );

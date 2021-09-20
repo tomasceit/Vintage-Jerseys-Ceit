@@ -3,7 +3,7 @@ import ItemCount from "../ItemCount/ItemCount.jsx";
 
 const ItemDetail = (props) => {
   return (
-    <div className="item-detail">
+    <div id={`itemDetail${props.item.id}`} className="item-detail">
       <div className="d-flex justify-content-between">
         <h3>{props.item.name}</h3>
         <h3 className="c-red">${props.item.price}</h3>
@@ -22,9 +22,10 @@ const ItemDetail = (props) => {
 
           <hr />
 
-          <p className="text-center item-stock">Quedan {props.item.stock} productos disponibles</p>
+          <p className="text-center item-stock">Quedan {props.item.stock} items disponibles</p>
         </div>
       </div>
+      <hr />
     </div>
   );
 };

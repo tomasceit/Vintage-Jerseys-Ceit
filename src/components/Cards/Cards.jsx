@@ -1,11 +1,11 @@
 import "./Cards.css";
 import ItemCount from "../ItemCount/ItemCount.jsx";
 
-const Cards = ({ name = 'nombre del producto', price = '80.00', src = 'https://tienda.ganon.com/sca-dev-kilimanjaro/img/no_image_available.jpeg?resizeid=3\u0026resizeh=250\u0026resizew=300', stock = 10, initial = 1 }) => {
+const Cards = ({ id, name = 'nombre del producto', price = '80.00', src = 'https://tienda.ganon.com/sca-dev-kilimanjaro/img/no_image_available.jpeg?resizeid=3\u0026resizeh=250\u0026resizew=300', stock = 10, initial = 1 }) => {
   return (
     <div className="productContainer">
 
-      <a className="productImage" href="#itemDetails">
+      <a className="productImage" href={`#itemDetail${id}`}>
         <div className="productImage">
           <img src={src} alt="Imagen del producto" />
         </div>
@@ -15,7 +15,7 @@ const Cards = ({ name = 'nombre del producto', price = '80.00', src = 'https://t
 
         <div className="productInfo d-flex flex-column">
           <h3 className="productName">
-            <a href='#'>{name}</a>
+            <a href={`#itemDetail${id}`}>{name}</a>
           </h3>
           <span className="productPrice">${price}</span>
         </div>

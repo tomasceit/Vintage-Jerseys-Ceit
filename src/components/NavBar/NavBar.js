@@ -5,7 +5,7 @@ import UserWidget from "../UserWidget/UserWidget";
 
 const NavBar = () => {
   return (
-    <nav className="navbar d-flex align-content-center">
+    <nav className="navbar d-flex align-content-center sticky-top">
       <a id="mainLogo" href="#">
         <h1>VINTAGE <span>JERSEYS</span></h1>
       </a>
