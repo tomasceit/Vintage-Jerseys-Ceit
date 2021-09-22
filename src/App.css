@@ -12,3 +12,6 @@ a {
 li {
   list-style: none;
 }
+.myContainer{
+  margin: 2rem 5rem !important;
+}

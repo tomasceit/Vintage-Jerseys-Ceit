@@ -4,13 +4,13 @@
   height: 65px;
   align-items: center;
 }
-.main-nav-items > li > a {
+.main-nav-items li{
   color: white;
   font-weight: 700;
-  font-size: 1.3rem;
+  font-size: 1.15rem;
   letter-spacing: .1rem;
 }
-.main-nav-items > li > a:hover{
+.main-nav-items li:hover{
     color: #e83630;
     transition: all calc(200 * 1ms) cubic-bezier(.42,.01,.58,1);
 }

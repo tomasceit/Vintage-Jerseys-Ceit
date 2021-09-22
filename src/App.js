@@ -1,17 +1,25 @@
 import "./App.css";
-import NavBar from "./components/NavBar/NavBar";
-import ItemsListContainer from "./components/ItemsListContainer/ItemsListContainer";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import NavBar from "./components/NavBar/NavBar.jsx";
 import Footer from "./components/Footer/Footer";
-import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
+import Home from "./pages/Home";
+import NotFound from "./pages/NotFound";
+import ProductDetail from "./pages/ProductDetail";
+import CategoryFilter from "./pages/CategoryFilter";
 
 const App = () => {
   return (
     <>
-      <NavBar />
-      <ItemsListContainer />
-      <hr />
-      <ItemDetailContainer />
-      <Footer />
+      <BrowserRouter>
+        <NavBar />
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/product/:id" component={ProductDetail} />
+          <Route exact path="/category/:keyName" component={CategoryFilter} />
+          <Route path="*" component={NotFound} />
+        </Switch>
+        <Footer />
+      </BrowserRouter>
     </>
   );
 };
