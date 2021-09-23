@@ -20,6 +20,10 @@ const ProductDetail = () => {
         }
       })
       .then((producto) => setItem(producto))
+      .catch((error)=> {
+        console.error('No se pudo encontrar el producto', error)
+        setItem(undefined)
+      })
       .finally(() => setCargando(false))
   }, [id]);
 
@@ -29,7 +33,7 @@ const ProductDetail = () => {
       {!cargando && (item !== undefined ? (
         <ItemDetail key={item.id} item={item} />
       ) : (
-        <h3 className="text-center">'Ese producto no existe :('</h3>
+        <h3 className="text-center">Ese producto no existe :(</h3>
       ))}
     </div>
   );

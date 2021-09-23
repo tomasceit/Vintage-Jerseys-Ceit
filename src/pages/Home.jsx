@@ -1,4 +1,4 @@
-import ItemsListContainer from "../containers/ItemsListContainer/ItemsListContainer";
+import ItemsListContainer from "../containers/ItemsListContainer/ItemsListContainer.jsx";
 
 const Home = () => {
   return (

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Cards = ({
   id,
   name = "nombre del producto",
-  price = "80.00",
+  price = "Precio",
   src = "https://tienda.ganon.com/sca-dev-kilimanjaro/img/no_image_available.jpeg?resizeid=3\u0026resizeh=250\u0026resizew=300",
 }) => {
   return (

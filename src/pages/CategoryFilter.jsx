@@ -1,5 +1,5 @@
 import { useParams } from "react-router";
-import ItemsListContainer from "../containers/ItemsListContainer/ItemsListContainer";
+import ItemsListContainer from "../containers/ItemsListContainer/ItemsListContainer.jsx";
 
 const CategoryFilter = () => {
 

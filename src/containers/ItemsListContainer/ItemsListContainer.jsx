@@ -10,11 +10,8 @@ const ItemsListContainer = ({ filtro }) => {
         setCargando(true);
         fetch(`http://localhost:3001/products`)
             .then((response) => {
-                if (response.ok) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
+                if (response.ok) { return response.json() } 
+                else { throw response }
             })
             .then((result) => {
                 (filtro !== undefined || null)
@@ -28,7 +25,9 @@ const ItemsListContainer = ({ filtro }) => {
     return (
         <section id="itemsContainer" className="myContainer">
             {cargando && (<div className="d-flex flex-column loading"><p>Loading...</p> <div className="lds-roller"><div /><div /><div /><div /><div /><div /><div /><div /></div></div>)}
-            {!cargando && <ItemsList prods={products} />}
+            {(products.length === 0 && filtro !== undefined) 
+            ? <h3 className="m-2 text-center">En este momento no tenemos productos de esta categoría</h3>
+            : !cargando && <ItemsList prods={products} />}
         </section>);
 }
 
