@@ -2,7 +2,7 @@
     "products" : [
         {
           "id": 0,
-          "name": "1995 Barcelona Titular",
+          "name": "1995 Barcelona Home",
           "price": "8.500,00",
           "src": "https://www.jerseygoal.co/images/Retro-Jersey/1992-1995%20Barcelona%20Home%20Retro%20Jersey%201.jpg",
           "initial": 1,
@@ -63,6 +63,61 @@
           "stock": 6,
           "initial": 1,
           "category": "premier_league",
+          "description":
+            "Esto sería la descripción del producto. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et iaculis lectus. Aliquam ac condimentum turpis, nec aliquet odio. Proin sit amet nulla nec tortor bibendum vestibulum nec non metus. Quisque ac neque facilisis, fringilla eros ac, varius tellus. Vivamus sit amet felis ex. Donec ut justo suscipit, suscipit mauris vel, pellentesque metus. Sed sapien mauris, mollis ac enim ac, ornare sagittis augue. Mauris lacinia nisl sed massa maximus, sit amet egestas dui pharetra."
+        },
+        {
+          "id": 6,
+          "name": "1999 Barcelona Home",
+          "price": "11.500,00",
+          "src": "https://www.jerseygoal.co/images/Barcelona/111.jpg",
+          "stock": 4,
+          "initial": 1,
+          "category": "la_liga",
+          "description":
+            "Esto sería la descripción del producto. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et iaculis lectus. Aliquam ac condimentum turpis, nec aliquet odio. Proin sit amet nulla nec tortor bibendum vestibulum nec non metus. Quisque ac neque facilisis, fringilla eros ac, varius tellus. Vivamus sit amet felis ex. Donec ut justo suscipit, suscipit mauris vel, pellentesque metus. Sed sapien mauris, mollis ac enim ac, ornare sagittis augue. Mauris lacinia nisl sed massa maximus, sit amet egestas dui pharetra."
+        },
+        {
+          "id": 7,
+          "name": "1991-1992 AC Milan Home",
+          "price": "8.800,00",
+          "src": "https://www.jerseygoal.co/images/Retro-Jersey/1991-1992%20AC%20Milan%20Retro%20Home%20Jersey%201.jpg",
+          "stock": 6,
+          "initial": 1,
+          "category": "serie_a",
+          "description":
+            "Esto sería la descripción del producto. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et iaculis lectus. Aliquam ac condimentum turpis, nec aliquet odio. Proin sit amet nulla nec tortor bibendum vestibulum nec non metus. Quisque ac neque facilisis, fringilla eros ac, varius tellus. Vivamus sit amet felis ex. Donec ut justo suscipit, suscipit mauris vel, pellentesque metus. Sed sapien mauris, mollis ac enim ac, ornare sagittis augue. Mauris lacinia nisl sed massa maximus, sit amet egestas dui pharetra."
+        },
+        {
+          "id": 8,
+          "name": "1998-1999 Man Utd Home",
+          "price": "8.500,00",
+          "src": "https://www.jerseygoal.co/images/Retro-Jersey/1998-1999%20Manchester%20United%20Home%20Retro%20Jersey%20Beckham%207%20Shirt.jpg",
+          "stock": 8,
+          "initial": 1,
+          "category": "premier_league",
+          "description":
+            "Esto sería la descripción del producto. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et iaculis lectus. Aliquam ac condimentum turpis, nec aliquet odio. Proin sit amet nulla nec tortor bibendum vestibulum nec non metus. Quisque ac neque facilisis, fringilla eros ac, varius tellus. Vivamus sit amet felis ex. Donec ut justo suscipit, suscipit mauris vel, pellentesque metus. Sed sapien mauris, mollis ac enim ac, ornare sagittis augue. Mauris lacinia nisl sed massa maximus, sit amet egestas dui pharetra."
+        },
+        {
+          "id": 9,
+          "name": "1994 WC Germany Home",
+          "price": "14.500,00",
+          "src": "https://www.jerseygoal.co/images/New-Post/1994%20Germany%20Home%20Retro%20Jersey.jpg",
+          "stock": 10,
+          "initial": 1,
+          "category": "national_teams",
+          "description":
+            "Esto sería la descripción del producto. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et iaculis lectus. Aliquam ac condimentum turpis, nec aliquet odio. Proin sit amet nulla nec tortor bibendum vestibulum nec non metus. Quisque ac neque facilisis, fringilla eros ac, varius tellus. Vivamus sit amet felis ex. Donec ut justo suscipit, suscipit mauris vel, pellentesque metus. Sed sapien mauris, mollis ac enim ac, ornare sagittis augue. Mauris lacinia nisl sed massa maximus, sit amet egestas dui pharetra."
+        },
+        {
+          "id": 10,
+          "name": "1996 River Plate Home",
+          "price": "9.000,00",
+          "src": "https://www.jerseygoal.co/images/Retro-Jersey/1996%20River%20Plate%20Home%20Retro%20Jersey%201.jpg",
+          "stock": 3,
+          "initial": 1,
+          "category": "primera_division_argentina",
           "description":
             "Esto sería la descripción del producto. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et iaculis lectus. Aliquam ac condimentum turpis, nec aliquet odio. Proin sit amet nulla nec tortor bibendum vestibulum nec non metus. Quisque ac neque facilisis, fringilla eros ac, varius tellus. Vivamus sit amet felis ex. Donec ut justo suscipit, suscipit mauris vel, pellentesque metus. Sed sapien mauris, mollis ac enim ac, ornare sagittis augue. Mauris lacinia nisl sed massa maximus, sit amet egestas dui pharetra."
         }

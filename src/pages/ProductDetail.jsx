@@ -33,7 +33,7 @@ const ProductDetail = () => {
       {!cargando && (item !== undefined ? (
         <ItemDetail key={item.id} item={item} />
       ) : (
-        <h3 className="text-center">Ese producto no existe :(</h3>
+        <h3 className="text-center mt-5" style={{height: "46vh"}}>Ese producto no existe :(</h3>
       ))}
     </div>
   );

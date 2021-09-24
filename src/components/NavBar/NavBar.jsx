@@ -19,7 +19,7 @@ const NavBar = () => {
       </ul>
 
       <div className="d-flex nav-buttons">
-        <CartWidget />
+        <Link to='/cart'><CartWidget /></Link>
         <UserWidget />
       </div>
     </nav>
