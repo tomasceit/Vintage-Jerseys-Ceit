@@ -13,10 +13,7 @@ const ItemDetail = ({ item }) => {
         <img src={item.src} alt="Imagen del producto en detalle" />
         <div>
           <p className="item-description">{item.description}</p>
-          <div className="buttons-details justify-content-between d-flex">
-            <ItemCount stock={item.stock} initial={item.initial} />
-            <button className="btn btn-danger">Add to cart</button>
-          </div>
+          <ItemCount item={item} stock={item.stock} initial={item.initial} />
           <hr />
           <p className="text-center item-stock">Quedan {item.stock} items disponibles</p>
         </div>

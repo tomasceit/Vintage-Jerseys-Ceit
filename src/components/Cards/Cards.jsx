@@ -2,11 +2,16 @@ import "./Cards.css";
 import { Link } from "react-router-dom";
 
 const Cards = ({
+  item,
   id,
   name = "nombre del producto",
   price = "Precio",
   src = "https://tienda.ganon.com/sca-dev-kilimanjaro/img/no_image_available.jpeg?resizeid=3\u0026resizeh=250\u0026resizew=300",
 }) => {
+  const addToCart = (item, qty) => {
+    item.quantity = qty;
+    console.log(item)
+  };
   return (
     <div className="productContainer">
       <Link className="productImage" to={`/product/${id}`}>
@@ -27,8 +32,8 @@ const Cards = ({
           <Link to={`/product/${id}`}>
             <button className="addToCart">View details</button>
           </Link>
-          <Link to={`/product/${id}`}>
-            <button className="addToCart d-flex">
+          <Link to={`/cart`}>
+            <button className="addToCart d-flex" onClick={()=>addToCart(item, 1)}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="icon icon-tabler icon-tabler-shopping-cart-plus"

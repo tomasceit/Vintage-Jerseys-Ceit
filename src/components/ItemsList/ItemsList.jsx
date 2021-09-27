@@ -9,6 +9,7 @@ const ItemsList = ({prods}) => {
         return (
           <Card
             key={prod.id}
+            item={prod}
             id={prod.id}
             name={prod.name}
             price={prod.price}

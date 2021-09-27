@@ -13,19 +13,6 @@ p.item-description{
     font-size: 1.5rem;
     padding: 3rem;
 }
-.buttons-details{
-    padding: 0 3rem;
-}
-.buttons-details #itemCounter button, .buttons-details > button{
-    height: 3.5rem;
-    font-size: 1.5rem;
-}
-.buttons-details #itemCounter > .operations{
-    width: 2.5rem;
-}
-.buttons-details #itemCounter > button {
-    width: 3.8rem;
-}
 p.item-stock{
     font-size: 1.2rem;
 }

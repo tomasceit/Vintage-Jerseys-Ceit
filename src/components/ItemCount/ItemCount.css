@@ -13,3 +13,16 @@
 #itemCounter > .operations{
     width:1.2rem;
 }
+.buttons-details{
+    padding: 0 3rem;
+}
+.buttons-details #itemCounter button, .buttons-details > a > button{
+    height: 3.5rem;
+    font-size: 1.5rem;
+}
+.buttons-details #itemCounter > .operations{
+    width: 2.5rem;
+}
+.buttons-details #itemCounter > button {
+    width: 3.8rem;
+}
