@@ -14,8 +14,6 @@ const ItemsList = ({prods}) => {
             name={prod.name}
             price={prod.price}
             src={prod.src}
-            stock={prod.stock}
-            initial={prod.initial}
           />
         );
       })}
