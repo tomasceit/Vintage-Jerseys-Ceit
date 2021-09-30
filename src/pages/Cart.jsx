@@ -13,11 +13,12 @@ const Cart = () => {
       <div className="d-flex align-items-center justify-content-between mb-1">
         <h2>CART</h2>
         {cart.length !== 0 && (
-          <button className="btn" style={{ width: "180px", height: '3rem', fontSize: '1.5rem' }} onClick={clearCart}>
+          <button className="btn btn-clear" onClick={clearCart}>
             Vaciar carrito
           </button>
         )}
       </div>
+      <hr />
       <CartList />
     </div>
   );

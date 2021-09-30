@@ -1,6 +1,6 @@
 .navbar {
   background-color: #262528;
-  padding: 22px 30px;
+  padding: 22px 36px;
   height: 65px;
   align-items: center;
 }
@@ -28,7 +28,7 @@
   margin: 0.25rem 1rem;
 }
 .main-nav-items {
-  width: 65%;
+  width: 55%;
   justify-content: center;
   margin-bottom: 0;
 }

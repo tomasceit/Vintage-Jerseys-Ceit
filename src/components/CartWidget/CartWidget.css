@@ -5,7 +5,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    min-width: 114px;
+    min-width: 125px;
 }
 .shopping-cart-logo > svg:hover {
     stroke: #e83630;

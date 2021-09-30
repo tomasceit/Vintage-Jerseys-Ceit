@@ -32,9 +32,7 @@ export const CartProvider = ({ children }) => {
     }
   };
 
-  const clear = () => {
-    setCart([]);
-  };
+  const clear = () => setCart([]);
 
   const isInCart = (id) => {
     const found = cart.find((prod) => prod.item.id === id);
