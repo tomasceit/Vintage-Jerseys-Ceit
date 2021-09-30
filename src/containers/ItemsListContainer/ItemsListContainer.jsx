@@ -25,31 +25,23 @@ const ItemsListContainer = ({ filtro }) => {
       .finally(() => setCargando(false));
   }, [filtro]);
 
-  return (
-    <section id="itemsContainer" className="myContainer">
-      {cargando ? (
-        <div className="d-flex flex-column loading">
-          <p>Loading...</p>{" "}
-          <div className="lds-roller">
-            <div />
-            <div />
-            <div />
-            <div />
-            <div />
-            <div />
-            <div />
-            <div />
-          </div>
-        </div>
-      ) : products.length === 0 && filtro !== undefined ? (
-        <h3 className="m-2 text-center">
-          En este momento no tenemos productos de esta categoría
-        </h3>
-      ) : (
-        !cargando && <ItemsList prods={products} />
-      )}
-    </section>
-  );
+  if (cargando) {
+    return (
+      <div className="d-flex flex-column loading">
+        <p>Loading...</p>{" "}
+        <div className="lds-roller"><div /><div /><div /><div /><div /><div /><div /><div /></div>
+      </div>
+    );
+  } else {
+    return (
+      <section id="itemsContainer" className="myContainer">
+        {products.length === 0 && filtro !== undefined 
+          ? <h3 className="m-2 text-center">En este momento no tenemos productos de esta categoría</h3>
+          : !cargando && <ItemsList prods={products} />
+        }
+      </section>
+    );
+  }
 };
 
 export default ItemsListContainer;

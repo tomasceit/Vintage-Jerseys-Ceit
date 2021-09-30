@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <footer id="footer" className="text-center">
-      <div className="container pt-4">
-        <section className="mb-4">
+      <div className="container pt-3">
+        <section className="mb-3">
           <Link to="/" className="btn btn-link btn-floating btn-lg text-dark m-1">
             <i className="fab fa-facebook-f"></i>
           </Link>

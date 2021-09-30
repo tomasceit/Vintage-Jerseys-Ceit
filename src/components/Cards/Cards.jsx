@@ -6,7 +6,7 @@ const Cards = ({
   id,
   item,
   name = "nombre del producto",
-  price = "Precio",
+  price = 0,
   src = "https://tienda.ganon.com/sca-dev-kilimanjaro/img/no_image_available.jpeg?resizeid=3\u0026resizeh=250\u0026resizew=300",
 }) => {
   const { addItem } = useCart();
@@ -28,7 +28,7 @@ const Cards = ({
           <h3 className="productName">
             <Link to={`/product/${id}`}>{name}</Link>
           </h3>
-          <span className="productPrice">${price}</span>
+          <span className="productPrice">${price.toFixed(2)}</span>
         </div>
 
         <div className="productButtons d-flex">
@@ -37,6 +37,7 @@ const Cards = ({
           </Link>
           <Link to={`/cart`}>
           <button className="addToCart d-flex" onClick={()=>addToCart(item,1)}>
+            <p className="mb-0 me-1">Add to cart</p>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="icon icon-tabler icon-tabler-shopping-cart-plus"

@@ -2,8 +2,19 @@
     background-color: transparent;
     border: none;
     padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 114px;
 }
-.shopping-cart-logo > svg:hover{
+.shopping-cart-logo > svg:hover {
     stroke: #e83630;
     transition: all calc(200 * 1ms) cubic-bezier(.42,.01,.58,1);
+}
+.shopping-cart-logo > p {
+    font-weight: 600;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    color: white;
+    margin: 0;
 }

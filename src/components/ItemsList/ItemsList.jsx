@@ -15,7 +15,7 @@ const ItemsList = ({prods}) => {
             price={prod.price}
             src={prod.src}
           />
-        );
+        )
       })}
     </div>
   );

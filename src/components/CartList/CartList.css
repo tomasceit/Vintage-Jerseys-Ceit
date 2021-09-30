@@ -1,0 +1,15 @@
+#cartList > thead > tr > th{
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+}
+#cartList > tbody > tr > td, #cartList > tbody > tr > th, tfoot > tr > td {
+    font-size: 1.2rem;
+    font-weight: 500;
+    letter-spacing: 0.05rem;
+}
+td.remove-item > span:hover{
+    cursor: pointer;
+    color: #e83630;
+    transition: all calc(200 * 1ms) cubic-bezier(.42,.01,.58,1);
+}

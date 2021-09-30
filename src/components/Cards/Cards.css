@@ -27,7 +27,7 @@ h3.productName > a{
     font-weight: 600;
     color: #262528;
 }
-h3.productName > a:hover{
+h3.productName > a:hover, .addToCart > p:hover {
     color: #e83630;
     transition: all calc(200 * 1ms) cubic-bezier(.42,.01,.58,1);
 }

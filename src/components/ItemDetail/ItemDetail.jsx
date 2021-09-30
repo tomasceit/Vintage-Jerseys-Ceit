@@ -21,7 +21,7 @@ const ItemDetail = ({ item }) => {
     <div className="item-detail">
       <div className="d-flex justify-content-between">
         <h3>{item.name}</h3>
-        <h3 className="c-red">${item.price}</h3>
+        <h3 className="c-red">${Number(item.price).toFixed(2)}</h3>
       </div>
 
       <div className="d-flex mt-3">
@@ -29,10 +29,10 @@ const ItemDetail = ({ item }) => {
         <div>
           <p className="item-description">{item.description}</p>
           {counter !== 0 
-          ? <div className="d-flex justify-content-center"><Link to={`/cart`}><button className="btn btn-danger end-shopping" onClick={()=>addToCart(item, counter)}>Agregar al carrito</button></Link></div> 
+          ? <div className="d-flex justify-content-center"><Link to={`/cart`}><button className="btn btn-danger end-shopping" onClick={()=>addToCart(item, counter)}>Terminar mi compra</button></Link></div> 
           : <ItemCount item={item} addToCart={confirmQty} />}
           <hr />
-          <p className="text-center item-stock">Quedan {item.stock} items disponibles</p>
+          <p className="item-stock">Quedan {item.stock} items disponibles</p>
         </div>
       </div>
     </div>

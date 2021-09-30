@@ -13,10 +13,12 @@ export const CartProvider = ({ children }) => {
       let itemIndex = cart.findIndex((prod) => prod.itemId === item.id);
       let newCartArray = cart;
       newCartArray[itemIndex].quantity += qty;
-      setCart(newCartArray);
+      setCart(newCartArray)
+      return
     } else {
       let newItem = { itemId: item.id, item: item, quantity: qty };
-      setCart((prevState) => [...prevState, newItem]);
+      setCart((prevState) => [...prevState, newItem])
+      return
     }
   };
 
@@ -26,7 +28,7 @@ export const CartProvider = ({ children }) => {
       let newCartArray = cart.filter((item) => item.itemId !== id);
       setCart(newCartArray);
     } else {
-        console.error('La camiseta del Barcelona no se encuentra en el carrito')
+        console.error('El producto que estas intentado remover no se encuentra en el carrito')
     }
   };
 
@@ -40,10 +42,25 @@ export const CartProvider = ({ children }) => {
     return isIn;
   };
 
+  const getQuantity = () => {
+    let qty = 0;
+    cart.forEach((product) => {
+      qty += product.quantity;
+    })
+    return qty
+  };
+
+  const getTotal = () => {
+    let total = 0;
+    cart.forEach((product) => {
+      let subtotal = Number(product.quantity)*Number(product.item.price)
+      total += subtotal;
+    })
+    return total
+  }
+
   return (
-    <CartContext.Provider
-      value={{ cart, addItem, removeItem, clear, isInCart }}
-    >
+    <CartContext.Provider value={{ cart, addItem, removeItem, clear, isInCart, getQuantity, getTotal }}>
       {children}
     </CartContext.Provider>
   );
