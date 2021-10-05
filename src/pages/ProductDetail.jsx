@@ -1,42 +1,51 @@
 import ItemDetail from "../components/ItemDetail/ItemDetail";
 import * as React from "react";
 import { useParams } from "react-router";
-import '../containers/ItemsListContainer/ItemsListContainer.css'
+import "../containers/ItemsListContainer/ItemsListContainer.css";
+import { getFirestore } from "../firebase";
+import NotFound from "../pages/NotFound.jsx";
 
 const ProductDetail = () => {
-  const [cargando, setCargando] = React.useState(false);
+  const [loading, setLoading] = React.useState(false);
   const [item, setItem] = React.useState({});
   const { id } = useParams();
 
   React.useEffect(() => {
-    setCargando(true);
-    const url = `http://localhost:3001/products/${id}`;
-    fetch(url)
-      .then((response) => {
-        if (response.ok) {
-          return response.json();
+    setLoading(true);
+
+    const db = getFirestore();
+    const productsCollection = db.collection("products");
+    const product = productsCollection.doc(id);
+
+    product
+      .get()
+      .then((doc) => {
+        if (!doc.exists) {
+          console.error("No se pudo encontrar el producto");
+          setItem(undefined);
         } else {
-          throw response;
+          setItem({ id: doc.id, ...doc.data() });
         }
       })
-      .then((producto) => setItem(producto))
-      .catch((error)=> {
-        console.error('No se pudo encontrar el producto', error)
-        setItem(undefined)
-      })
-      .finally(() => setCargando(false))
+      .catch()
+      .finally(() => setLoading(false));
   }, [id]);
 
-  return (
-    <div className="myContainer">
-      {cargando && (<div className="d-flex flex-column loading"><p>Loading...</p> <div className="lds-roller"><div /><div /><div /><div /><div /><div /><div /><div /></div></div>)}
-      {!cargando && (item !== undefined ? (
-        <ItemDetail key={item.id} item={item} />
-      ) : (
-        <h3 className="text-center mt-5" style={{height: "46vh"}}>Ese producto no existe :(</h3>
-      ))}
-    </div>
-  );
+
+
+  if (loading) {
+     return ( 
+      <div className="myContainer d-flex flex-column loading">
+        <p>Loading...</p>{" "}<div className="lds-roller"><div /><div /><div /><div /><div /><div /><div /><div /></div>
+      </div>
+    );
+  } else {
+    return (
+      item !== undefined 
+      ? <ItemDetail key={item.id} item={item} />
+      : <NotFound />
+    );
+  };
 };
 
 export default ProductDetail;

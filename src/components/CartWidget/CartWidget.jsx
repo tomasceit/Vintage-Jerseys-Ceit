@@ -1,9 +1,15 @@
 import "./CartWidget.css";
 import { useCart } from "../../context/CartContext";
+import * as React from 'react'
 
 const CartWidget = () => {
   const { getQuantity, cart } = useCart();
-  const cartQuantity = getQuantity();
+  const [cartQuantity, setCartQuantity] = React.useState(getQuantity())
+
+  React.useEffect(() => {
+    setCartQuantity(getQuantity())
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [cart])
 
   return (
     <button className="shopping-cart-logo">

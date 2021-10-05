@@ -14,7 +14,7 @@ const ItemDetail = ({ item }) => {
 
   return (
     
-    <div className="item-detail">
+    <div className="myContainer item-detail">
       <div className="d-flex justify-content-between">
         <h3>{item.name}</h3>
         <h3 className="c-red">${Number(item.price).toFixed(2)}</h3>

@@ -12,12 +12,17 @@ a {
 li {
   list-style: none;
 }
-.myContainer{
+.myContainer {
   margin: 2rem 5rem !important;
 }
-.ms-7{
+.ms-7 {
   margin-left: 5rem !important;
 }
-div#root{
-  min-height: 100vh;
+div#root {
+  display:flex; 
+  flex-direction:column;
+  height: 100vh;
+}
+::-webkit-scrollbar {
+  display: none;
 }

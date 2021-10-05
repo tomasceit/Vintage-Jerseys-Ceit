@@ -1,52 +1,59 @@
-.productContainer{
-    width: 25%;
-    padding: 1rem;
-    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+.productContainer {
+  width: 25%;
+  padding: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
 }
-.productContainer:hover{
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+.productContainer:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
 }
-a > .productImage{
-    max-height: 280px;
+a > .productImage {
+  max-height: 280px;
 }
 .productImage > img {
-    max-height: 100%;
-    max-width: 100%;
+  max-height: 100%;
+  max-width: 100%;
 }
-.productContent{
-    padding: .5rem;
-    font-family: "Barlow Condensed", sans-serif;
-    font-weight: 600;
+.productContent {
+  padding: 0.5rem;
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 600;
 }
-.productButtons{
-    padding-top: .5rem;
-    justify-content: space-between;
+.productInfo {
+  display: flex;
+  flex-direction: column;
 }
-h3.productName > a{
-    font-size: 1.7rem;
-    font-weight: 600;
-    color: #262528;
+.productInfo > span {
+  font-size: 1.4rem;
+  letter-spacing: 0.05rem;
+  color: #e83630;
 }
-h3.productName > a:hover, .addToCart > p:hover {
-    color: #e83630;
-    transition: all calc(200 * 1ms) cubic-bezier(.42,.01,.58,1);
+.productButtons {
+  padding-top: 0.5rem;
+  display: flex;
+  justify-content: space-between;
 }
-.productInfo > span{
-    font-size: 1.4rem;
-    letter-spacing: .05rem;
-    color: #e83630;
+h3.productName > a {
+  font-size: 1.7rem;
+  font-weight: 600;
+  color: #262528;
 }
-.addToCart{
-    background-color: transparent;
-    border: none;
-    font-size: 1.3rem;
-    align-items: center;
+h3.productName > a:hover,
+.addToCart > p:hover {
+  color: #e83630;
+  transition: all calc(200 * 1ms) cubic-bezier(0.42, 0.01, 0.58, 1);
 }
-button.addToCart:hover{
-    color: #e83630;
-    transition: all calc(200 * 1ms) cubic-bezier(.42,.01,.58,1);
+.addToCart {
+  background-color: transparent;
+  border: none;
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
 }
-.addToCart > svg:hover{
-    stroke: #e83630;
-    transition: all calc(200 * 1ms) cubic-bezier(.42,.01,.58,1);
+button.addToCart:hover {
+  color: #e83630;
+  transition: all calc(200 * 1ms) cubic-bezier(0.42, 0.01, 0.58, 1);
+}
+.addToCart > svg:hover {
+  stroke: #e83630;
+  transition: all calc(200 * 1ms) cubic-bezier(0.42, 0.01, 0.58, 1);
 }

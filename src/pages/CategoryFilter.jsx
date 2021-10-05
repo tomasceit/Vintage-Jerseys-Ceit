@@ -2,33 +2,37 @@ import * as React from "react";
 import { useParams } from "react-router";
 import ItemsListContainer from "../containers/ItemsListContainer/ItemsListContainer.jsx";
 import NotFound from "../pages/NotFound.jsx";
+import { getFirestore } from "../firebase";
 
 const CategoryFilter = () => {
   const { keyName } = useParams();
   const [categoryName, setCategoryName] = React.useState("");
+  const [cat, setCat] = React.useState({});
 
   React.useEffect(() => {
-    const url = `http://localhost:3001/categories/${keyName}`;
-    fetch(url)
-      .then((response) => {
-        if (response.ok) {
-          return response.json();
+    const db = getFirestore();
+    const categoriesCollection = db.collection("categories");
+    const category = categoriesCollection.doc(keyName);
+
+    category
+      .get()
+      .then((doc) => {
+        if (doc.exists) {
+          setCat({id: doc.id, ...doc.data()})
+          setCategoryName(cat.name)
         } else {
-          throw response;
+          setCategoryName("404");
         }
       })
-      .then((dato) => setCategoryName(dato.name))
-      .catch((error) => error.status === 404 && setCategoryName("404"));
-  }, [keyName]);
+      .catch()
+  }, [cat.name, keyName]);
 
   return (
     <>
-      <h2 className="mt-3 ms-7">{categoryName} Retro Jerseys</h2>
-      {categoryName === "404" ? (
-        <NotFound />
-      ) : (
-        <ItemsListContainer filtro={keyName} />
-      )}
+      <h2 className="mt-4 ms-7">{categoryName} Retro Jerseys</h2>
+      {categoryName === "404" 
+      ? <NotFound />
+      : <ItemsListContainer filtro={keyName} />}
     </>
   );
 };

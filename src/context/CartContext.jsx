@@ -13,13 +13,13 @@ export const CartProvider = ({ children }) => {
       let itemIndex = cart.findIndex((prod) => prod.itemId === item.id);
       let newCartArray = cart;
       newCartArray[itemIndex].quantity += qty;
+      console.log(getQuantity())
       setCart(newCartArray)
-      return
     } else {
       let newItem = { itemId: item.id, item: item, quantity: qty };
       setCart((prevState) => [...prevState, newItem])
-      return
     }
+    return
   };
 
   const removeItem = (id) => {
