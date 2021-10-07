@@ -13,7 +13,6 @@ const ItemDetail = ({ item }) => {
   }
 
   return (
-    
     <div className="myContainer item-detail">
       <div className="d-flex justify-content-between">
         <h3>{item.name}</h3>
@@ -24,7 +23,10 @@ const ItemDetail = ({ item }) => {
         <img src={item.src} alt="Imagen del producto en detalle" />
         <div>
           <p className="item-description">{item.description}</p>
-          {counter !== 0 
+          {item.stock === 0 
+          ? <div className="d-flex justify-content-center"><button className="btn btn-danger end-shopping" disabled> SIN STOCK</button></div>
+          
+          : counter !== 0 
           ? (<div className="d-flex justify-content-center">
               <Link to={`/cart`}>
                 <button className="btn btn-danger end-shopping">

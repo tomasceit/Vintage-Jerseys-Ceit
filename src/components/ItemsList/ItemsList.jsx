@@ -4,7 +4,7 @@ import Card from "../Cards/Cards.jsx";
 
 const ItemsList = ({prods}) => {
   return (
-    <div id="itemsList" className="d-flex flex-row flex-wrap">
+    <div id="itemsList">
       {prods?.map((prod) => {
         return (
           <Card

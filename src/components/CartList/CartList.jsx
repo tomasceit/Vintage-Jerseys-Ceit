@@ -21,7 +21,6 @@ const CartList = () => {
     );
   } else {
     return (
-      <>
       <table id="cartList" className="table">
         <thead>
           <tr>
@@ -66,12 +65,6 @@ const CartList = () => {
           </tr>
         </tfoot>
       </table>
-      <div className="d-flex justify-content-end" style={{padding: "0rem 1rem"}}>
-        <button  className="btn btn-danger m-2" style={{ width: "180px", height: '3rem', fontSize: '1.5rem' }}>
-          Terminar compra
-        </button>
-      </div>
-      </>
     );
   }
 };

@@ -1,7 +1,10 @@
 .productContainer {
-  width: 25%;
+  width: 24%;
   padding: 1rem;
   box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  margin-right: .75rem;
 }
 .productContainer:hover {
   box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;

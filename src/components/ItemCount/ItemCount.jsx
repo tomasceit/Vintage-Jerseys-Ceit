@@ -17,7 +17,7 @@ const ItemCount = ({ item, confirm }) => {
     <div className="buttons-details">
       <div id="itemCounter" className="d-flex">
         <button type="button" className="operations" onClick={restaItem}>-</button>
-        <button type="button">{counterNumber}</button>
+        <button type="button" className="number">{counterNumber}</button>
         <button type="button" className="operations" onClick={sumaItem}>+</button>
       </div>
       <button className="btn btn-danger" onClick={() => {confirm(counterNumber); addToCart(item, counterNumber)}}>

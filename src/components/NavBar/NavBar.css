@@ -1,7 +1,7 @@
 .navbar {
   background-color: #262528;
   padding: 22px 36px;
-  height: 65px;
+  max-height: 65px;
   align-items: center;
 }
 .main-nav-items li{
@@ -27,8 +27,10 @@
 .nav-item {
   margin: 0.25rem 1rem;
 }
-.main-nav-items {
-  width: 55%;
+#navbarSupportedContent1 {
+  width: 60%;
   justify-content: center;
-  margin-bottom: 0;
+}
+nav > button.navbar-toggler {
+  background-color: white;
 }
