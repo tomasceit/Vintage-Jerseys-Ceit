@@ -1,0 +1,13 @@
+#confirmation-modal {
+    backdrop-filter: blur(10px);
+}
+#confirmation-modal > .modal-dialog {
+    border-radius: .5rem;
+    width: 400px;
+}
+.modal-body {
+    min-height: 150px;
+}
+.modal-body > p {
+    font-size: 1.3rem;
+}
