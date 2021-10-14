@@ -1,6 +1,5 @@
 import "./NavBar.css";
 import CartWidget from "../CartWidget/CartWidget.jsx";
-import UserWidget from "../UserWidget/UserWidget.jsx";
 import {Link} from 'react-router-dom';
 
 const NavBar = () => {
@@ -26,7 +25,6 @@ const NavBar = () => {
 
       <div className="d-flex nav-buttons">
         <Link to='/cart'><CartWidget /></Link>
-        <UserWidget />
       </div>
     </nav>
   );

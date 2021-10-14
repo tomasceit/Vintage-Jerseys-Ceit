@@ -1,10 +1,11 @@
 import * as React from "react";
 import "./ItemsListContainer.css";
 import ItemsList from "../../components/ItemsList/ItemsList.jsx";
+import LoadingIcon from "../../components/LoadingIcon/LoadingIcon";
 import { getFirestore } from "../../firebase";
 
 const ItemsListContainer = ({ filtro }) => {
-  const [loading, setLoading] = React.useState(false);
+  const [loading, setLoading] = React.useState(true);
   const [products, setProducts] = React.useState([]);
 
   React.useEffect(() => {
@@ -31,19 +32,7 @@ const ItemsListContainer = ({ filtro }) => {
 
   if (loading) {
     return (
-      <div className="myContainer d-flex flex-column loading">
-        <p>Loading...</p>{" "}
-        <div className="lds-roller">
-          <div />
-          <div />
-          <div />
-          <div />
-          <div />
-          <div />
-          <div />
-          <div />
-        </div>
-      </div>
+      <LoadingIcon />
     );
   } else {
     return (

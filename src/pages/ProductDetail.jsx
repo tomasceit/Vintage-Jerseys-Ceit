@@ -1,4 +1,5 @@
 import ItemDetail from "../components/ItemDetail/ItemDetail";
+import LoadingIcon from "../components/LoadingIcon/LoadingIcon";
 import * as React from "react";
 import { useParams } from "react-router";
 import "../containers/ItemsListContainer/ItemsListContainer.css";
@@ -6,7 +7,7 @@ import { getFirestore } from "../firebase";
 import NotFound from "../pages/NotFound.jsx";
 
 const ProductDetail = () => {
-  const [loading, setLoading] = React.useState(false);
+  const [loading, setLoading] = React.useState(true);
   const [item, setItem] = React.useState({});
   const { id } = useParams();
 
@@ -35,9 +36,7 @@ const ProductDetail = () => {
 
   if (loading) {
      return ( 
-      <div className="myContainer d-flex flex-column loading">
-        <p>Loading...</p>{" "}<div className="lds-roller"><div /><div /><div /><div /><div /><div /><div /><div /></div>
-      </div>
+      <LoadingIcon />
     );
   } else {
     return (
