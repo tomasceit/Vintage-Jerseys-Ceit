@@ -1,6 +1,7 @@
 import * as React from "react";
 import "./CheckoutForm.css";
 import { useCart } from "../../context/CartContext";
+import { useUser } from "../../context/UserContext";
 import { getFirestore, fireBase } from "../../firebase";
 import ConfirmationModal from "../ConfirmationModal/ConfirmationModal";
 
@@ -8,6 +9,7 @@ const CheckoutForm = () => {
   const [state, setState] = React.useState(false);
   const [orderId, setOrderId] = React.useState("");
   const { cart, clear, getTotal } = useCart();
+  const { loggedIn } = useUser();
   const [userInfo, setUserInfo] = React.useState({
     fullName: "",
     email: "",
@@ -73,11 +75,11 @@ const CheckoutForm = () => {
           <hr />
           <div className="d-flex align-items-center">
             <label htmlFor="fullName">Nombres y Apellido:</label>
-            <input type="text" id="fullName" name="fullName" onChange={onInputBuyer} required />
+            <input type="text" id="fullName" name="fullName" onChange={onInputBuyer} value={loggedIn ? loggedIn.displayName : null} disabled={loggedIn && true} />
           </div>
           <div className="d-flex align-items-center mt-3">
             <label htmlFor="email">Email:</label>
-            <input type="email" id="email" name="email" onChange={onInputBuyer} required />
+            <input type="email" id="email" name="email" onChange={onInputBuyer} value={loggedIn ? loggedIn.email : null} disabled={loggedIn && true} required />
           </div>
           <div className="d-flex align-items-center mt-3">
             <label htmlFor="phone">Celular:</label>
@@ -103,7 +105,7 @@ const CheckoutForm = () => {
             </div>
             <div className="d-flex align-items-center mt-3" style={{ marginLeft: "2.3rem" }}>
               <label>CP:</label>
-              <input type="number" name="postalCode" onChange={onInputShippingInfo} required style={{ width: "80px" }}/>
+              <input type="number" name="postalCode" onChange={onInputShippingInfo} required style={{ width: "80px" }} />
             </div>
           </div>
 

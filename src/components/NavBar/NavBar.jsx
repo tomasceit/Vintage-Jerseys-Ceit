@@ -1,8 +1,11 @@
 import "./NavBar.css";
 import CartWidget from "../CartWidget/CartWidget.jsx";
+import UserWidget from "../UserWidget/UserWidget.jsx";
+import {useUser} from "../../context/UserContext"
 import {Link} from 'react-router-dom';
 
 const NavBar = () => {
+  const { loggedIn } = useUser();
   return (
     <nav id="navbar" className="navbar d-flex align-content-center navbar-expand-lg sticky-top">
       <button className="navbar-toggler toggler-example" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation">
@@ -24,7 +27,8 @@ const NavBar = () => {
       </div>
 
       <div className="d-flex nav-buttons">
-        <Link to='/cart'><CartWidget /></Link>
+        <Link to='/cart' className="d-flex"><CartWidget /></Link>
+        <Link to={loggedIn ? '/myAccount' : '/myAccount/signIn'} className="d-flex"><UserWidget /></Link>
       </div>
     </nav>
   );
