@@ -10,7 +10,7 @@
   box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
 }
 a > .productImage {
-  max-height: 280px;
+  max-height: 400px;
 }
 .productImage > img {
   max-height: 100%;

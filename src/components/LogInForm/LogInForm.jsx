@@ -8,7 +8,7 @@ const LogInForm = () => {
     const [email, setEmail] = React.useState('');
     const [password, setPassword] = React.useState('');
     const [errorLogIn, setErrorLogIn] = React.useState(false)
-    const { loggedIn } = useUser();
+    const { userLogged } = useUser();
     const onSubmit = (evt) => {
         evt.preventDefault();
         auth.signInWithEmailAndPassword(email, password)
@@ -16,7 +16,7 @@ const LogInForm = () => {
             .catch(() => { setErrorLogIn(true) })
             .finally(() => { })
     }
-    if (loggedIn) {
+    if (userLogged) {
         return <Redirect to='/myAccount' />
     } else {
         return (

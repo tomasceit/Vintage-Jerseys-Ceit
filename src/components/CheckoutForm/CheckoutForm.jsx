@@ -9,10 +9,10 @@ const CheckoutForm = () => {
   const [state, setState] = React.useState(false);
   const [orderId, setOrderId] = React.useState("");
   const { cart, clear, getTotal } = useCart();
-  const { loggedIn } = useUser();
+  const { userLogged } = useUser();
   const [userInfo, setUserInfo] = React.useState({
-    fullName: "",
-    email: "",
+    fullName: userLogged ? userLogged.displayName : '',
+    email: userLogged? userLogged.email : '',
     phone: "",
   });
   const [shippingInfo, setShippingInfo] = React.useState({
@@ -75,11 +75,11 @@ const CheckoutForm = () => {
           <hr />
           <div className="d-flex align-items-center">
             <label htmlFor="fullName">Nombres y Apellido:</label>
-            <input type="text" id="fullName" name="fullName" onChange={onInputBuyer} value={loggedIn ? loggedIn.displayName : null} disabled={loggedIn && true} />
+            <input type="text" id="fullName" name="fullName" onChange={onInputBuyer} value={userLogged ? userLogged.displayName : null} disabled={userLogged && true} />
           </div>
           <div className="d-flex align-items-center mt-3">
             <label htmlFor="email">Email:</label>
-            <input type="email" id="email" name="email" onChange={onInputBuyer} value={loggedIn ? loggedIn.email : null} disabled={loggedIn && true} required />
+            <input type="email" id="email" name="email" onChange={onInputBuyer} value={userLogged ? userLogged.email : null} disabled={userLogged && true} required />
           </div>
           <div className="d-flex align-items-center mt-3">
             <label htmlFor="phone">Celular:</label>

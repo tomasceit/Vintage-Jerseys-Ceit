@@ -1,18 +1,30 @@
 import * as React from 'react';
+import './SignUpForm.css';
 import { auth } from '../../firebase'
-import { Link } from 'react-router-dom'
+import { Link, Redirect } from 'react-router-dom'
 
 const SignUpForm = () => {
     const [email, setEmail] = React.useState('');
+    const [state, setState] = React.useState(false)
+    const [phone, setPhone] = React.useState(0);
     const [password, setPassword] = React.useState('');
+    const [fullName, setFullName] = React.useState('');
     const onSubmit = (evt) => {
         evt.preventDefault();
         auth.createUserWithEmailAndPassword(email, password)
-            .then(() => { alert('User created successfully') })
+            .then(() => {
+                auth.currentUser.updateProfile({
+                    displayName: fullName,
+                    phoneNumber: phone
+                }).then(() => { console.log('Updated profile') })
+            })
             .catch(() => { console.error('failed') })
-            .finally(() => { console.log('Termino el proceso') })
+            .finally(() => { setState(true) })
     }
 
+    if (state) {
+       return <Redirect to='/' />
+    } else {
     return (
         <div className="myContainer">
             <form onSubmit={onSubmit} className="d-flex flex-column align-items-center">
@@ -21,7 +33,11 @@ const SignUpForm = () => {
                     <hr />
                     <div className="d-flex align-items-center">
                         <label htmlFor="fullName">Nombres y Apellido:</label>
-                        <input type="text" id="fullName" name="fullName" required />
+                        <input type="text" id="fullName" name="fullName" onChange={(evt) => setFullName(evt.target.value)} required />
+                    </div>
+                    <div className="d-flex align-items-center mt-3">
+                        <label htmlFor="phone">Celular:</label>
+                        <input type="tel" id="phone" name="phone" onChange={(evt) => setPhone(evt.target.value)} required />
                     </div>
                     <div className="d-flex align-items-center mt-3">
                         <label htmlFor="email">Email:</label>
@@ -35,13 +51,13 @@ const SignUpForm = () => {
                         </div>
                     </div>
                 </fieldset>
-                <button type="submit" className="btn btn-danger mt-3" style={{ width: "180px", height: "3rem", fontSize: "1.5rem" }}>
+                <button type="submit" className="btn btn-danger mt-3 registratration-btn">
                     REGISTRARSE
                 </button>
             </form>
             <Link to="/MyAccount/signIn" className="d-flex justify-content-center mt-3">Ya tengo cuenta</Link>
         </div>
-    )
+    ) }
 }
 
 export default SignUpForm

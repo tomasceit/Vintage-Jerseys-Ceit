@@ -26,7 +26,7 @@ const Cart = () => {
       {cart.length !== 0 && <div className="d-flex justify-content-end" style={{padding: "0rem 1rem"}}>
         <Link to="/checkout">
           <button  className="btn btn-danger m-2" style={{ width: "180px", height: '3rem', fontSize: '1.5rem' }}>
-            Terminar compra
+            Finalizar compra
           </button>
         </Link>
       </div>}

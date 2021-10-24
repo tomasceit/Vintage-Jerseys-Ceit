@@ -34,3 +34,6 @@
 nav > button.navbar-toggler {
   background-color: white;
 }
+a.user{
+  min-width: 120px;
+}

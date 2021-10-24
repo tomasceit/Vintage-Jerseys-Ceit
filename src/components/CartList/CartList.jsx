@@ -15,7 +15,7 @@ const CartList = () => {
       <div className="d-flex flex-column">
         <h3>No hay productos en el carrito</h3>
         <Link to="/">
-          <button className="btn btn-danger mt-3">Volvé a la Home</button>
+          <button className="btn btn-danger mt-3">Volvé a la tienda</button>
         </Link>
       </div>
     );

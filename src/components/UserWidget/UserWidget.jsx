@@ -2,7 +2,7 @@ import "./UserWidget.css";
 import { useUser } from "../../context/UserContext"
 
 const UserWidget = () => {
-    const { loggedIn } = useUser();
+    const { userLogged } = useUser();
     return (
         <button className="user-logo">
             <svg
@@ -21,7 +21,7 @@ const UserWidget = () => {
                 <circle cx="12" cy="7" r="4" />
                 <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
             </svg>
-            {loggedIn ? <p style={{color:"white"}}>{loggedIn.email}</p> : <p style={{color:"white"}}>Mi cuenta</p>}
+            {userLogged ? <p style={{color:"white"}}>{userLogged.displayName}</p> : <p style={{color:"white"}}>Mi cuenta</p>}
         </button>
     )
 }

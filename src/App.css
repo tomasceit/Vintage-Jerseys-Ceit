@@ -37,3 +37,16 @@ div#root {
 ::-webkit-scrollbar {
   display: none;
 }
+.account{
+  width: 25%;
+}
+.account > li{
+  font-size: 1.5rem;
+}
+.account > li:hover{
+  color: #e83630;
+  cursor: pointer;
+}
+.red{
+  color: #e83630 !important;
+}

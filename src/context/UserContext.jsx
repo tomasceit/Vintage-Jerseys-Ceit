@@ -6,21 +6,21 @@ const UserContext = React.createContext([]);
 UserContext.displayName = "UserContext";
 
 export const UserProvider = ({ children }) => {
-    const [loggedIn, setLoggedIn] = React.useState(auth.currentUser);
+    const [userLogged, setuserLogged] = React.useState(auth.currentUser);
 
     auth.onAuthStateChanged(() => {
-        setLoggedIn(auth.currentUser);
+        setuserLogged(auth.currentUser);
     })
 
     const close = () => {
         auth.signOut()
-            .then(() =>setLoggedIn(null))
+            .then(() =>setuserLogged(null))
             .catch((error) => console.error('ocurrio', error))
             .finally(() => {});
     }
 
     return (
-        <UserContext.Provider value={{ loggedIn, close }}>
+        <UserContext.Provider value={{ userLogged, close }}>
             {children}
         </UserContext.Provider>
     );

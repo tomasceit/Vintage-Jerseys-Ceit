@@ -21,7 +21,7 @@ const ItemDetail = ({ item }) => {
 
       <div className="d-flex mt-3">
         <img src={item.src} alt="Imagen del producto en detalle" />
-        <div>
+        <div className="myContainer">
           <p className="item-description">{item.description}</p>
           {item.stock === 0 
           ? <div className="d-flex justify-content-center"><button className="btn btn-danger end-shopping" disabled> SIN STOCK</button></div>
