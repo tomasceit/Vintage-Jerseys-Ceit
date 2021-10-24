@@ -50,3 +50,8 @@ div#root {
 .red{
   color: #e83630 !important;
 }
+.my-btn {
+  width: 180px;
+  height: 3rem;
+  font-size: 1.5rem;
+}

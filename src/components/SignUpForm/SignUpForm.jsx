@@ -15,8 +15,8 @@ const SignUpForm = () => {
             .then(() => {
                 auth.currentUser.updateProfile({
                     displayName: fullName,
-                    phoneNumber: phone
-                }).then(() => { console.log('Updated profile') })
+                    photoURL: phone
+                })
             })
             .catch(() => { console.error('failed') })
             .finally(() => { setState(true) })

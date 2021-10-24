@@ -25,9 +25,9 @@ const LogInForm = () => {
                     {/* Registrarse */}
                     <div className="text-wrap p-4 p-lg-5 text-center d-flex align-items-center order-md-last">
                         <div className="text w-100">
-                            <h2>¡Bienvenido a VintageJerseys!</h2>
-                            <p>¿Todavía no tenes una cuenta?</p>
-                            <Link to="/myAccount/signUp" className="btn btn-danger">Registrate</Link>
+                            <h2 className="logIn">¡Bienvenido a VintageJerseys!</h2>
+                            <p className="logIn">¿Todavía no tenes una cuenta?</p>
+                            <Link to="/myAccount/signUp" className="btn btn-danger my-btn">Registrate</Link>
                         </div>
                     </div>
 
@@ -35,7 +35,7 @@ const LogInForm = () => {
                     <div className="login-wrap p-4 p-lg-5" style={{ width: "350px" }}>
                         <div>
                             <div className="w-100">
-                                <h3 className="mb-4">Ingresar</h3>
+                                <h2 className="logIn mb-3">Ingresar</h2>
                             </div>
                             <hr />
                         </div>
@@ -53,7 +53,7 @@ const LogInForm = () => {
                             </div>
                             }
                             <div className="form-group">
-                                <button type="submit" className="form-control btn btn-danger submit px-3 w-50">Iniciar sesión</button>
+                                <button type="submit" className="form-control btn btn-danger my-btn submit px-3 w-50">Iniciar sesión</button>
                             </div>
                         </form>
                     </div>

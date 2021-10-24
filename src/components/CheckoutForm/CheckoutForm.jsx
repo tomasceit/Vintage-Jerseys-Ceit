@@ -13,7 +13,7 @@ const CheckoutForm = () => {
   const [userInfo, setUserInfo] = React.useState({
     fullName: userLogged ? userLogged.displayName : '',
     email: userLogged? userLogged.email : '',
-    phone: "",
+    phone: userLogged? userLogged.photoURL : '',
   });
   const [shippingInfo, setShippingInfo] = React.useState({
     fullName: "",
@@ -83,7 +83,7 @@ const CheckoutForm = () => {
           </div>
           <div className="d-flex align-items-center mt-3">
             <label htmlFor="phone">Celular:</label>
-            <input type="tel" id="phone" name="phone" onChange={onInputBuyer} required />
+            <input type="tel" id="phone" name="phone" onChange={onInputBuyer} value={userLogged ? userLogged.photoURL : null} disabled={userLogged && true} required />
           </div>
         </fieldset>
         <fieldset>
@@ -132,7 +132,7 @@ const CheckoutForm = () => {
             </div>
           </div>
         </fieldset>
-        <button type="submit" className="btn btn-danger mt-3" style={{ width: "180px", height: "3rem", fontSize: "1.5rem" }}>
+        <button type="submit" className="btn btn-danger my-btn mt-3">
           FINALIZAR COMPRA
         </button>
       </form>

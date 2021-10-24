@@ -12,15 +12,15 @@ const AccountInfo = () => {
             <tbody>
                 <tr>
                     <td className="w-25">Apellido y nombres:</td>
-                    <td>{userLogged.displayName}</td>
+                    <td>{userLogged.displayName ? userLogged.displayName : 'No tenemos esta informacion disponible'}</td>
                 </tr>
                 <tr>
                     <td className="w-25">Email:</td>
-                    <td>{userLogged.email}</td>
+                    <td>{userLogged.email ? userLogged.email : 'No tenemos esta informacion disponible'}</td>
                 </tr>
                 <tr>
                     <td className="w-25">Celular:</td>
-                    <td>{userLogged.phoneNumber}</td>
+                    <td>{userLogged.photoURL ? userLogged.photoURL : 'No tenemos esta informacion disponible'}</td>
                 </tr>
             </tbody>
         </table>
