@@ -7,11 +7,11 @@ import { Link } from 'react-router-dom';
 
 const NavBar = () => {
   const { userLogged } = useUser();
-
+  
   return (
     <nav id="navbar" className="navbar d-flex align-content-center navbar-expand-lg sticky-top">
       <button className="navbar-toggler toggler-example" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation">
-        <span className="dark-blue-text"><i className="fas fa-bars fa-1x"></i></span>
+        <span className="dark-blue-text"><i className="fas fa-bars fa-1x" /></span>
       </button>
 
       <Link id="mainLogo" to='/home' >

@@ -1,8 +1,15 @@
 import "./UserWidget.css";
+import * as React from "react";
 import { useUser } from "../../context/UserContext"
 
 const UserWidget = () => {
     const { userLogged } = useUser();
+    const [name, setName] = React.useState('')
+    React.useEffect(() => {
+        setTimeout(() => {
+            userLogged && setName(userLogged.displayName)
+        }, 2000)
+    }, [userLogged]);
     return (
         <button className="user-logo">
             <svg
@@ -21,7 +28,7 @@ const UserWidget = () => {
                 <circle cx="12" cy="7" r="4" />
                 <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
             </svg>
-            {userLogged ? <p style={{color:"white"}}>{userLogged.displayName}</p> : <p style={{color:"white"}}>Mi cuenta</p>}
+            {userLogged ? <p style={{ color: "white" }}>{name}</p> : <p style={{ color: "white" }}>Mi cuenta</p>}
         </button>
     )
 }

@@ -3,3 +3,11 @@ div > button.btn-search{
     height: 3rem;
     font-size: 1.5rem;
 }
+p.search {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+input.search {
+    font-size: 1.2rem;
+    height: 3rem;
+}
