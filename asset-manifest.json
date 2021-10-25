@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/Vintage-Jerseys-Ceit/static/css/main.12da6c90.chunk.css",
-    "main.js": "/Vintage-Jerseys-Ceit/static/js/main.b76e4f78.chunk.js",
-    "main.js.map": "/Vintage-Jerseys-Ceit/static/js/main.b76e4f78.chunk.js.map",
+    "main.css": "/Vintage-Jerseys-Ceit/static/css/main.c682f90f.chunk.css",
+    "main.js": "/Vintage-Jerseys-Ceit/static/js/main.4ca7afb2.chunk.js",
+    "main.js.map": "/Vintage-Jerseys-Ceit/static/js/main.4ca7afb2.chunk.js.map",
     "runtime-main.js": "/Vintage-Jerseys-Ceit/static/js/runtime-main.a818d4e3.js",
     "runtime-main.js.map": "/Vintage-Jerseys-Ceit/static/js/runtime-main.a818d4e3.js.map",
     "static/js/2.1dafcc78.chunk.js": "/Vintage-Jerseys-Ceit/static/js/2.1dafcc78.chunk.js",
     "static/js/2.1dafcc78.chunk.js.map": "/Vintage-Jerseys-Ceit/static/js/2.1dafcc78.chunk.js.map",
     "index.html": "/Vintage-Jerseys-Ceit/index.html",
-    "static/css/main.12da6c90.chunk.css.map": "/Vintage-Jerseys-Ceit/static/css/main.12da6c90.chunk.css.map",
+    "static/css/main.c682f90f.chunk.css.map": "/Vintage-Jerseys-Ceit/static/css/main.c682f90f.chunk.css.map",
     "static/js/2.1dafcc78.chunk.js.LICENSE.txt": "/Vintage-Jerseys-Ceit/static/js/2.1dafcc78.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.a818d4e3.js",
     "static/js/2.1dafcc78.chunk.js",
-    "static/css/main.12da6c90.chunk.css",
-    "static/js/main.b76e4f78.chunk.js"
+    "static/css/main.c682f90f.chunk.css",
+    "static/js/main.4ca7afb2.chunk.js"
   ]
 }
