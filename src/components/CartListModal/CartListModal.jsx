@@ -2,11 +2,11 @@ import "./CartListModal.css";
 import * as React from "react";
 import CartList from "../CartList/CartList";
 
-const CartListModal = ( { estado }) => {
+const CartListModal = ({ estado }) => {
   const [state, setState] = React.useState(true);
   React.useEffect(() => {
-      state === estado ? setState(prevState => !prevState) : setState(estado)
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    state === estado ? setState(prevState => !prevState) : setState(estado)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [estado])
 
   return (

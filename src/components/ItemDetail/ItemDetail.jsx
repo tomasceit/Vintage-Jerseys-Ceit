@@ -28,9 +28,14 @@ const ItemDetail = ({ item }) => {
           
           : counter !== 0 
           ? (<div className="d-flex justify-content-center">
-              <Link to={`/cart`}>
+              <Link to={`/cart`} className="me-5">
                 <button className="btn btn-danger end-shopping">
                   Terminar mi compra
+                </button>
+              </Link>
+              <Link to={`/home`}>
+                <button className="btn btn-dark end-shopping">
+                  Seguir comprando
                 </button>
               </Link>
             </div>)

@@ -6,11 +6,11 @@ const Footer = () => {
       <div className="container pt-3">
         <section className="mb-3">
           <a href="https://ar.linkedin.com/in/tomasceit" className="btn btn-link btn-floating btn-lg text-dark m-1" target="_blank" rel="noreferrer">
-            <i className="fab fa-linkedin"></i>
+            <i className="fab fa-linkedin" />
           </a>
 
           <a href="https://github.com/tomasceit/" className="btn btn-link btn-floating btn-lg text-dark m-1" target="_blank" rel="noreferrer">
-            <i className="fab fa-github"></i>
+            <i className="fab fa-github" />
           </a>
         </section>
       </div>

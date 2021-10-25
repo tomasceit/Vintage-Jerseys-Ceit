@@ -8,7 +8,7 @@ const CartWidget = () => {
 
   React.useEffect(() => {
     setCartQuantity(getQuantity())
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [cart])
 
   return (
