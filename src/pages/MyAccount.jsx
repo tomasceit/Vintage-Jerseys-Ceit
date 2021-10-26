@@ -4,6 +4,7 @@ import { Redirect } from "react-router-dom"
 import SearchOrder from '../components/SearchOrder/SearchOrder'
 import AccountInfo from '../components/AccountInfo/AccountInfo'
 import LoadingIcon from '../components/LoadingIcon/LoadingIcon'
+import useLoading from '../hooks/useLoading'
 
 const MyAccount = () => {
     const { userLogged, close } = useUser();
@@ -11,12 +12,7 @@ const MyAccount = () => {
         close();
     }
     const [state, setState] = React.useState(false)
-    const [loading, setLoading] = React.useState(true)
-    React.useEffect(()=>{
-        setTimeout(()=>{
-            setLoading(false)
-        }, 1000)
-    }, [])
+    const loading = useLoading();
 
     if (userLogged) {
         return (

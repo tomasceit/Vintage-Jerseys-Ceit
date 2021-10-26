@@ -1,14 +1,10 @@
 import * as React from "react";
 import LogInForm from "../components/LogInForm/LogInForm"
 import LoadingIcon from '../components/LoadingIcon/LoadingIcon'
+import useLoading from "../hooks/useLoading"
 
 const SignIn = () => {
-  const [loading, setLoading] = React.useState(true)
-  React.useEffect(() => {
-    setTimeout(() => {
-      setLoading(false)
-    }, 1000)
-  }, [])
+  const loading = useLoading();
   if (loading) {
     return <LoadingIcon />
   } else {

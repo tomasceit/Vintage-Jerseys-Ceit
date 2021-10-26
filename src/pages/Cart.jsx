@@ -3,18 +3,14 @@ import { useCart } from "../context/CartContext";
 import { Link } from "react-router-dom";
 import CartList from "../components/CartList/CartList";
 import LoadingIcon from '../components/LoadingIcon/LoadingIcon'
+import useLoading from "../hooks/useLoading"
 
 const Cart = () => {
   const { clear, cart } = useCart();
   const clearCart = () => {
     clear();
   };
-  const [loading, setLoading] = React.useState(true)
-  React.useEffect(() => {
-    setTimeout(() => {
-      setLoading(false)
-    }, 1000)
-  }, [])
+  const loading = useLoading();
   if (loading) {
     return <LoadingIcon />
   } else {
